@@ -10,9 +10,7 @@
 
     <link rel="stylesheet" href="css/styles.css?v=1.0">
 
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
+    
 </head>
 
 <body>
@@ -24,8 +22,8 @@
     echo $data['site_name'];
     ?> </h1>
 
-<h1><a href="index.php?page=accounts&action=all">Show All Accounts</a></h1>
-<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
+<h2><a href="index.php?page=accounts&action=all">Show All Accounts</a></h2>
+<h2><a href="index.php?page=tasks&action=all">Show All Tasks</a></h2>
 
 <form action="index.php?page=accounts&action=login" method="POST">
 
@@ -41,7 +39,7 @@
 
 
 </form>
-<h1><a href="index.php?page=accounts&action=register">Register</a></h1>
+<h2><a href="index.php?page=accounts&action=register">Register</a></h2>
 
 
 <script src="js/scripts.js"></script>
