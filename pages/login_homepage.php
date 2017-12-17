@@ -13,6 +13,10 @@
       margin-bottom: 0;
       border-radius: 0;
     }
+
+    .body{
+      background-color: black;
+    }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 650px}
@@ -28,7 +32,7 @@
     footer {
       background-color: #555;
       color: white;
-      padding: 15px;
+      padding: 15px;  
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
@@ -44,7 +48,19 @@
     height:42px;
     font-size: 18px;
 }
+
+.btn{
+  background-color: transparent;
+  border-color: transparent;
+  color:white;
+}
+
+form{
+  display: inline-block;
+}
   </style>
+
+
 </head>
 
 
@@ -56,16 +72,30 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>      
       </button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php?page=tasks&action=all">Tasks</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
       
-      <li><div>
+      <ul class="navbar-form navbar-right">
+        <form action="index.php?page=accounts&action=show" method="POST">
+        
+          <button type="submit" class="btn btn-default">Your Profile</button>
+        
+          
+      </form>
+      <form action="index.php?page=accounts&action=logout" method="POST">
+        <button type="submit" class="btn btn-default">Logout</button>
+        </form>  
+      </ul>
+      
+      <!-- <ul class="nav navbar-nav navbar-right"> -->
+      
+      <!-- <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
         <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
         </form></div></li>
@@ -73,8 +103,8 @@
         <li><div>
         <form action="index.php?page=accounts&action=logout" method="POST">
         <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
-        </form></div></li>
-      </ul>
+        </form></div></li> -->
+      <!-- </ul> -->
     </div>
   </div>
 </nav>
@@ -94,7 +124,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Web System Development</p>
+  
 </footer>
 
 <script src="js/scripts.js"></script>
