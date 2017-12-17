@@ -4,7 +4,7 @@
   <title>Task manager</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -67,7 +67,7 @@
         <li class="active"><a href="#">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      
+      -->
       <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
         <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
@@ -102,6 +102,9 @@
 <input type="text" class="form-control" name="ownerid" value="<?php echo $_SESSION["userID"]; ?>">
 </div>
 <br><br>
+-->
+
+
 
 <?php date_default_timezone_set("America/New_York"); ?>
 <div class = "form-group">
@@ -138,9 +141,6 @@
   </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <p>Web System Development</p>
-</footer>
 
 <script src="js/scripts.js"></script>
 </body>
