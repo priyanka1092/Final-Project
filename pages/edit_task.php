@@ -4,6 +4,7 @@
   <title>Task manager</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -67,8 +68,8 @@
         <li class="active"><a href="#">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      
-      <li><div>
+      -->
+      <!-- <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
         <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
         </form></div></li>
@@ -76,12 +77,11 @@
         <li><div>
         <form action="index.php?page=accounts&action=logout" method="POST">
         <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
-        </form></div></li>
+        </form></div></li> -->
       </ul>
     </div>
   </div>
 </nav>
-
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
@@ -129,7 +129,12 @@
 
 <div class = "form-group">
 <label>Is Done-</label>
-<input type="text" name="isdone" class="form-control" value="<?php echo $data->isdone;?>"readonly><br>
+<select>
+  <option value="Done 0">  </option>
+ <option value="Not Done 1"> </option>
+
+<!-- <input type="" name="isdone" class="form-control" value=" --> <?php echo $data->isdone;?>"readonly><br>
+</select>
 </div>
 <br><br>
 
@@ -137,15 +142,6 @@
 </form>
 
 </div>
-
-<div class="col-sm-2 sidenav">
-    </div>
-  </div>
-</div>
-
-<footer class="container-fluid text-center">
-  <p>Web System Development</p>
-</footer>
 
 
 
