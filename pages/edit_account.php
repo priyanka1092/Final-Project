@@ -47,6 +47,15 @@
     label{
       width:100px;
     }
+    .btn{
+  background-color: transparent;
+  border-color: transparent;
+  color:white;
+}
+
+form{
+  display: inline-block;
+}
   </style>
 </head>
 
@@ -66,9 +75,20 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-      
-      <li><div>
+      <ul class="navbar-form navbar-right">
+        <form action="index.php?page=accounts&action=show" method="POST">
+        
+          <button type="submit" class="btn btn-default">Your Profile</button>
+        
+          
+      </form>
+      <form action="index.php?page=accounts&action=logout" method="POST">
+        <button type="submit" class="btn btn-default">Logout</button>
+        </form>  
+      </ul>
+      <!-- <ul class="nav navbar-nav navbar-right">
+      -->
+      <!-- <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
         <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
         </form></div></li>
@@ -77,62 +97,51 @@
         <form action="index.php?page=accounts&action=logout" method="POST">
         <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
         </form></div></li>
-      </ul>
+      </ul> --> -->
     </div>
   </div>
 </nav>
 
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-    </div>
-    <div class="col-sm-8 text-center"> 
     <h3> Edit Details </h3>
 
 <form action="index.php?page=accounts&action=save&id=<?php echo $data->id; ?>" method="post" class = "form-inline">
 
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>First name-</label>
     <input type="text" class="form-control" name="fname" value="<?php echo $data->fname; ?>">
     </div><br><br>
     
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Last name-</label>
     <input type="text" class="form-control" name="lname" value="<?php echo $data->lname; ?>">
     </div><br><br>
     
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Email-</label>
     <input type="text" class="form-control" name="email" value="<?php echo $data->email; ?>">
     </div><br><br>
     
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Phone-</label>
     <input type="text" class="form-control" name="phone" value="<?php echo $data->phone; ?>">
     </div><br><br>
     
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Birthday-</label>
     <input type="text" class="form-control" name="birthday" value="<?php echo $data->birthday; ?>">
     </div><br><br>
     
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Gender-</label>
-    <input type="text" class="form-control" name="gender" value="<?php echo $data->gender; ?>">
+    <input type="radio" class="form control" name="gender" value="female"> Female 
+    <input type="radio" class="form control" name="gender" value="male"> Male 
+    <!--<input type="text" class="form-control" name="gender" value="<?php echo $data->gender; ?>"> -->
     </div><br><br>
     <input type="submit" class="btn btn-primary" value="SAVE">
 </form>
 
 </div>
 
-<div class="col-sm-2 sidenav">
-    </div>
-  </div>
-</div>
-
-<footer class="container-fluid text-center">
-  <p>Web System Development</p>
-</footer>
 
 
 <script src="js/scripts.js"></script>
