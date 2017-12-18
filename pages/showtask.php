@@ -69,6 +69,7 @@
       <ul class="nav navbar-nav navbar-right">
       
       <li><div>
+      
         <form action="index.php?page=accounts&action=show" method="POST">
         <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
         </form></div></li>

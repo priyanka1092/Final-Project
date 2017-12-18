@@ -166,6 +166,14 @@ class routes
          $route->page = 'accounts';
          $route->controller = 'accountsController';
          $route->method = 'edit';
+
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'back1';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'back1';
+        $routes[] = $route;
          
          $routes[] = $route;
  

@@ -43,10 +43,27 @@
     .glyphicon {
     height:42px;
     font-size: 18px;
-}
+    }
     label{
       width:100px;
     }
+
+ /* .btn {
+    background-color: transparent;
+    border-color: transparent;
+    color:white;
+    }*/
+
+  form{
+  display: inline-block;
+  } 
+
+  .btn-default {
+    color: #333;
+    background-color: transparent;
+    border-color: none;
+    color: white;
+  }
   </style>
 </head>
 
@@ -59,16 +76,27 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>      
       </button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php?page=accounts&action=back1">Home</a></li>
+        <li class="active"><a href="index.php?page=tasks&action=all">Tasks</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
       
-      <li><div>
+      <ul class="navbar-form navbar-right">
+        <form action="index.php?page=accounts&action=show" method="POST">
+          <button type="submit" class="btn btn-default">Your Profile</button>
+      </form>
+      <form action="index.php?page=accounts&action=logout" method="POST">
+        <button type="submit" class="btn btn-default">Logout</button>
+        </form>  
+      </ul>
+      
+      <!-- <ul class="nav navbar-nav navbar-right"> -->
+      
+      <!-- <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
         <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
         </form></div></li>
@@ -76,25 +104,48 @@
         <li><div>
         <form action="index.php?page=accounts&action=logout" method="POST">
         <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
-        </form></div></li>
-      </ul>
+        </form></div></li> -->
+      <!-- </ul> -->
     </div>
   </div>
 </nav>
 
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
+<!-- <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
     </div>
-    <div class="col-sm-8 text-center">
-<body>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php?page=tasks&action=all">Tasks</a></li>
+      </ul>
+      <ul class="navbar-form navbar-right">
+      <form action="index.php?page=accounts&action=show" method="POST">
+        
+          <button type="submit" class="btn btn-default">Your Profile</button>
+        
+          
+      </form>
+      <form action="index.php?page=accounts&action=logout" method="POST">
+        <button type="submit" class="btn btn-default">Logout</button>
+      </form>  
+      </ul>
+    </div>
+  </div>
+</nav> -->
 
 <?php
 $text='';
-$text.='<h2>Pending Tasks</h2><br>';
-$text.='<a href="index.php?page=tasks&action=create"><span class="glyphicon glyphicon-plus">Create New Task</span></a>';
+$text='<div class="layout" style="margin: 20px">';
+$text.='<h2>All Tasks</h2><br>';
+$text.='<a href="index.php?page=tasks&action=create">Add Task</a>';
 if($data==FALSE){
-  $text.='No records found';
+  $text.='<br>No records found';
   $text.='</center>';
   echo $text;
 }
@@ -102,18 +153,18 @@ else{
 $text.=utility\htmlTable::genarateTableFromMultiArray($data);
 echo $text;
 }
+$text='</div>';
 ?>
 
-</div>
 
-<div class="col-sm-2 sidenav">
+
+<!-- <div class="col-sm-2 sidenav">
     </div>
   </div>
-</div>
+</div> -->
 
-<footer class="container-fluid text-center">
-  <p>Web System Development</p>
-</footer>
+<!-- <footer class="container-fluid text-center">  
+</footer> -->
 
 
 <script src="js/scripts.js"></script>

@@ -77,16 +77,13 @@ form{
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php?page=accounts&action=back1">Home</a></li>
         <li class="active"><a href="index.php?page=tasks&action=all">Tasks</a></li>
       </ul>
       
       <ul class="navbar-form navbar-right">
         <form action="index.php?page=accounts&action=show" method="POST">
-        
           <button type="submit" class="btn btn-default">Your Profile</button>
-        
-          
       </form>
       <form action="index.php?page=accounts&action=logout" method="POST">
         <button type="submit" class="btn btn-default">Logout</button>
@@ -115,7 +112,7 @@ form{
     </div>
     <div class="col-sm-8 text-center"> 
 
-&nbsp&nbsp&nbsp<h1><a href="index.php?page=tasks&action=all">Show All Tasks</a></h1>
+&nbsp&nbsp&nbsp<h1><a href="index.php?page=tasks&action=all">Welcome</a></h1>
 </div>
 
 <div class="col-sm-2 sidenav">

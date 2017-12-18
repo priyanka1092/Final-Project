@@ -13,9 +13,11 @@
       margin-bottom: 0;
       border-radius: 0;
     }
-    .body{
-      background-color: white;
+
+    body{
+      background-color: mediumpurple;
     }
+    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 650px}
     
@@ -54,7 +56,7 @@
   </style>
 </head>
 <body>
-<p>helooo</p>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -82,8 +84,8 @@
     
     <div class="col-sm-8 text-center"> 
       
-      <h1>Welcome</h1>
-      <p>This is website for managing tasks.</p>
+      <h1>To-Do Task Application</h1>
+    
       <hr>
 
       
@@ -106,9 +108,9 @@
 
       <button type="submit" class="btn btn-primary">Login</button>
       <a class="btn btn-primary" href="index.php?page=accounts&action=register">Register</a>
-      <!--</div>-->
+    
 </form>
-  <!-- <h5><a href="index.php?page=accounts&action=register">Register</a></h5> -->
+  <h5><a href="index.php?page=accounts&action=register">Register</a></h5>
     </div>
     <div class="col-sm-2 sidenav">
     </div>
@@ -116,7 +118,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Web System Development</p>
+ 
 </footer>
 
 </body>

@@ -43,10 +43,23 @@
     .glyphicon {
     height:42px;
     font-size: 18px;
-}
+    }
     label{
       width:100px;
     }
+
+form{
+  display: inline-block;
+  } 
+
+
+    .btn-default {
+    color: #333;
+    background-color: transparent;
+    border-color: none;
+    color: white;
+  }
+
   </style>
 </head>
 
@@ -59,25 +72,24 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>      
       </button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php?page=accounts&action=back1">Home</a></li>
+        <li class="active"><a href="index.php?page=tasks&action=all">Tasks</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
       
-      <li><div>
+      <ul class="navbar-form navbar-right">
         <form action="index.php?page=accounts&action=show" method="POST">
-        <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
-        </form></div></li>
-        
-        <li><div>
-        <form action="index.php?page=accounts&action=logout" method="POST">
-        <button type="submit" class="glyphicon glyphicon-log-out">Logout</button>
-        </form></div></li>
+          <button type="submit" class="btn btn-default">Your Profile</button>
+      </form>
+      <form action="index.php?page=accounts&action=logout" method="POST">
+        <button type="submit" class="btn btn-default">Logout</button>
+        </form>  
       </ul>
+    
     </div>
   </div>
 </nav>
@@ -87,6 +99,7 @@
     <div class="col-sm-2 sidenav">
     </div>
     <div class="col-sm-8 text-center"> 
+    <div class="Details">
     <h3> Details </h3>
 <form action="index.php?page=accounts&action=edit&id=<?php echo $data->id; ?>" method="post" class = "form-inline">
     
@@ -95,27 +108,27 @@
     <input type="text" class="form-control" name="fname" value="<?php echo $data->fname; ?>"readonly>
     </div><br><br>
 
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Last  name-</label>
     <input type="text" class="form-control" name="lname" value="<?php echo $data->lname; ?>"readonly>
     </div><br><br>
     
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>E-mail  ID-</label>
     <input type="text" class="form-control" name="email" value="<?php echo $data->email; ?>"readonly>
     </div><br><br>
     
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Phone No-</label>
     <input type="text" class="form-control" name="phone" value="<?php echo $data->phone; ?>"readonly>
     </div><br><br>
     
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Birthday-</label>
     <input type="text" class="form-control" name="birthday" value="<?php echo $data->birthday; ?>"readonly>
     </div><br><br>
     
-    <div class = "form-group" align="center">
+    <div class = "form-group">
     <label>Gender-</label>
     <input type="text" class="form-control" name="gender" value="<?php echo $data->gender; ?>"readonly>
     </div>
@@ -123,16 +136,15 @@
     <br>
     
     <input type="submit" class="btn btn-primary" value="Edit">
-    <br>
-    <br>
+    
 </form>
 
-
+<br><br>
 <form action="index.php?page=accounts&action=delete&id=<?php echo $data->id; ?> " method="post" id="form1">
-    <button type="submit" class="btn btn-primary" form="form1" value="delete">Delete</button>
+    <input type="submit" class="btn btn-primary" form="form1" value="delete" >
 </form>
 </div>
-
+</div>
 <div class="col-sm-2 sidenav">
     </div>
   </div>

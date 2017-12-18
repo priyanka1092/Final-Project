@@ -65,10 +65,19 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="index.php?page=accounts&action=back1">Home</a></li>
+        <li class="active"><a href="index.php?page=tasks&action=all">Tasks</a></li>
+      </ul>     
+
+      <ul class="navbar-form navbar-right">
+        <form action="index.php?page=accounts&action=show" method="POST">
+          <button type="submit" class="btn btn-default">Your Profile</button>
+      </form>
+      <form action="index.php?page=accounts&action=logout" method="POST">
+        <button type="submit" class="btn btn-default">Logout</button>
+        </form>  
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-      -->
+      
       <!-- <li><div>
         <form action="index.php?page=accounts&action=show" method="POST">
         <button type="submit" class="glyphicon glyphicon-user">Your Profile</button>
@@ -129,12 +138,11 @@
 
 <div class = "form-group">
 <label>Is Done-</label>
-<select>
-  <option value="Done 0">  </option>
- <option value="Not Done 1"> </option>
-
-<!-- <input type="" name="isdone" class="form-control" value=" --> <?php echo $data->isdone;?>"readonly><br>
-</select>
+<!-- <select>
+  <option value="1">Task Complete</option>
+  <option value="0">Task Incomplete</option>
+</select> -->
+<input type="text" class="form-control" name="isdone" value="<?php echo $data->isdone;?>">
 </div>
 <br><br>
 
